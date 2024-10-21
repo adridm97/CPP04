@@ -6,7 +6,7 @@
 /*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:46:53 by adrian            #+#    #+#             */
-/*   Updated: 2024/10/07 17:59:51 by adrian           ###   ########.fr       */
+/*   Updated: 2024/10/15 18:38:59 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 Animal::Animal() : type("Animal")
 {
     std::cout << "Animal constructor called" << std::endl;
+}
+Animal::Animal(const Animal &other) : type(other.type)
+{
+}
+Animal& Animal::operator=(const Animal &other)
+{
+    if (this != &other)
+        this->type = other.type;
+    return *this;
 }
 Animal::~Animal()
 {

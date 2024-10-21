@@ -6,7 +6,7 @@
 /*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 19:34:48 by adrian            #+#    #+#             */
-/*   Updated: 2024/10/08 19:35:07 by adrian           ###   ########.fr       */
+/*   Updated: 2024/10/16 10:20:56 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,14 @@ WrongCat::WrongCat()
     type = "WrongCat";
     std::cout << "WrongCat constructor called" << std::endl;
 }
-
+WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
+{}
+WrongCat &WrongCat::operator=(const WrongCat &other)
+{
+    if (this != &other)
+        WrongAnimal::operator=(other);
+    return *this;
+}
 WrongCat::~WrongCat()
 {
     std::cout << "WrongCat destructor called" << std::endl;
