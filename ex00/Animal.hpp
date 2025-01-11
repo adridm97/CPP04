@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aduenas- <aduenas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:17:19 by adrian            #+#    #+#             */
-/*   Updated: 2024/10/07 17:46:42 by adrian           ###   ########.fr       */
+/*   Updated: 2025/01/11 17:48:42 by aduenas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@
 
 class Animal
 {
-    protected:
+    protected:  
         std::string type;
     public:
         Animal();
+        Animal(const Animal &other);
+        Animal &operator=(const Animal &other);
         virtual ~Animal();
         std::string getType() const;
         virtual void makeSound() const;

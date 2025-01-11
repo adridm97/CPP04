@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aduenas- <aduenas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:46:53 by adrian            #+#    #+#             */
-/*   Updated: 2024/10/07 17:59:51 by adrian           ###   ########.fr       */
+/*   Updated: 2025/01/11 17:53:46 by aduenas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,18 @@
 Animal::Animal() : type("Animal")
 {
     std::cout << "Animal constructor called" << std::endl;
+}
+Animal::Animal(const Animal &other)
+{
+    std::cout << "Copy constructor Animal called" << std::endl;
+    *this = other;
+}
+Animal &Animal::operator=(const Animal &other)
+{
+    std::cout << "Operator assignment Animal called" << std::endl;
+    if (this != &other)
+        type = other.type;
+    return *this;
 }
 Animal::~Animal()
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aduenas- <aduenas-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 19:34:48 by adrian            #+#    #+#             */
-/*   Updated: 2025/01/11 17:43:23 by aduenas-         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:35:07 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,7 @@ WrongCat::WrongCat()
     type = "WrongCat";
     std::cout << "WrongCat constructor called" << std::endl;
 }
-WrongCat::WrongCat(const WrongCat &other)
-{
-    std::cout << "Copy constructor called" << std::endl;
-    *this = other;
-}
-WrongCat &WrongCat::operator=(const WrongCat &other)
-{
-    std::cout << "Operator assignment called" << std::endl;
-    if (this != &other)
-        type = other.type;
-    return *this;
-}
+
 WrongCat::~WrongCat()
 {
     std::cout << "WrongCat destructor called" << std::endl;

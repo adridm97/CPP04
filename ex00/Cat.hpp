@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aduenas- <aduenas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 19:17:00 by adrian            #+#    #+#             */
-/*   Updated: 2024/10/07 19:17:18 by adrian           ###   ########.fr       */
+/*   Updated: 2025/01/11 18:10:19 by aduenas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 
 #include "Animal.hpp"
 
-class Cat : public Animal
-{
-public:
-    Cat();
-    virtual ~Cat();
-    virtual void makeSound() const;
-};
+    class Cat : public Animal
+    {
+    public:
+        Cat();
+        Cat(const Cat &other);
+        Cat &operator=(const Cat &other);
+        virtual ~Cat();
+        virtual void makeSound() const;
+    };
 
 #endif
