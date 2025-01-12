@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 19:34:32 by adrian            #+#    #+#             */
-/*   Updated: 2024/10/21 16:10:59 by adrian           ###   ########.fr       */
+/*   Created: 2024/10/08 19:35:42 by adrian            #+#    #+#             */
+/*   Updated: 2024/10/22 17:12:46 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
-
+#include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 #include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
-class WrongCat : public WrongAnimal
+int main()
 {
-public:
-    WrongCat();
-    WrongCat(const WrongCat &other);
-    WrongCat &operator=(const WrongCat &other);
-    ~WrongCat();
-    void makeSound() const;
-};
+    Animal* animals[4];
+    
+    animals[0] = new Dog();
+    animals[1] = new Cat();
+    animals[2] = new Dog();
+    animals[3] = new Cat();
 
-#endif
+    for (int i = 0; i < 4; ++i)
+        animals[i]->makeSound();
+
+    for (int i = 0; i < 4; ++i)
+        delete animals[i];
+
+    return 0;
+}

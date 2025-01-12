@@ -6,7 +6,7 @@
 /*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:17:19 by adrian            #+#    #+#             */
-/*   Updated: 2024/10/15 18:34:50 by adrian           ###   ########.fr       */
+/*   Updated: 2024/10/21 15:46:38 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Animal
 {
     protected:
-        std::string type;
+        std::string _type;
     public:
         Animal();
         virtual ~Animal();
