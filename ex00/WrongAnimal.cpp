@@ -6,7 +6,7 @@
 /*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 19:32:32 by adrian            #+#    #+#             */
-/*   Updated: 2024/10/21 16:09:29 by adrian           ###   ########.fr       */
+/*   Updated: 2025/01/12 18:43:11 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ WrongAnimal::WrongAnimal() : _type("WrongAnimal")
 {
     std::cout << "WrongAnimal constructor called" << std::endl;
 }
-WrongAnimal::WrongAnimal(const WrongAnimal &other) : _type(other._type)
+WrongAnimal::WrongAnimal(const WrongAnimal &other)
 {
-    std::cout << "WrongAnimal copy constructor called" << std::endl;
+    std::cout << "Copy constructor called" << std::endl;
+    *this = other;
 }
-WrongAnimal& WrongAnimal::operator=(const WrongAnimal &other)
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 {
-    std::cout << "Wrong animal copy operator assignment called" << std::endl;
+    std::cout << "Operator assignment called" << std::endl;
     if (this != &other)
-        this->_type = other._type;
+        _type = other._type;
     return *this;
 }
 WrongAnimal::~WrongAnimal()

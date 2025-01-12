@@ -6,7 +6,7 @@
 /*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 19:35:42 by adrian            #+#    #+#             */
-/*   Updated: 2024/12/31 20:04:38 by adrian           ###   ########.fr       */
+/*   Updated: 2025/01/12 18:30:42 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 int main()
 {
-    const Animal *animal;
-    const Animal *dog;
-    const Animal *cat;
-    const WrongAnimal* wrongAnimal;
-    const WrongAnimal* wrongCat;
-    
+    const Animal		*animal;
+    const Animal		*dog;
+    const Animal		*cat;
+    const WrongAnimal	*wrongAnimal;
+    const WrongAnimal	*wrongCat;
+
     animal = new Animal();
     dog = new Dog();
     cat = new Cat();
@@ -32,8 +32,11 @@ int main()
     animal->makeSound();
     dog->makeSound();
     cat->makeSound();
+    animal->makeSound();
+
     wrongAnimal = new WrongAnimal();
-    wrongCat = new WrongCat();
+	wrongCat = new WrongCat();
+
     std::cout << wrongCat->getType() << " " << std::endl;
     wrongCat->makeSound();
     wrongAnimal->makeSound();

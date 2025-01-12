@@ -6,7 +6,7 @@
 /*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 19:17:35 by adrian            #+#    #+#             */
-/*   Updated: 2024/10/21 17:07:54 by adrian           ###   ########.fr       */
+/*   Updated: 2025/01/12 18:29:35 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ Cat::Cat() : Animal()
 }
 Cat::Cat(const Cat &other) : Animal(other)
 {
-    std::cout << "Cat copy constructor called" << std::endl;
+    std::cout << "Copy constructor Cat called" << std::endl;
+    *this = other;
 }
+
 Cat& Cat::operator=(const Cat &other)
 {
-    std::cout << "Cat copy assignment operator called" << std::endl;
+    std::cout << "Operator assignment Cat called" << std::endl;
     if (this != &other)
         Animal::operator=(other);
     return *this;
